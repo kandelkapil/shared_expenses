@@ -7,8 +7,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 export const routes: Routes = [
     { path: '', component: DashboardComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'signup', component: SignupComponent },
+    { path: 'login', component: LoginComponent, title: 'Login' },
+    { path: 'signup', component: SignupComponent, title: 'Sign Up' },
     { path: '**', redirectTo: '' } // Wildcard route for a 404 page
 ];
 

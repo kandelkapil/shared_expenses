@@ -16,6 +16,8 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
   errorMessage: string = '';
+  toggle= false;
+
 
   constructor(
     private router: Router,
@@ -26,6 +28,11 @@ export class LoginComponent {
     email: '',
     password: ''
   });
+
+
+  togglePassword() {
+    this.toggle = !this.toggle;
+  }
 
 
   onSubmit(): void {

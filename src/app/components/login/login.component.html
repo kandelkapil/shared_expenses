@@ -1,19 +1,43 @@
 <!-- src/app/login/login.component.html -->
-<div class="container bg-black">
-  <div class="row col-6 px-2" style="background-color: blue;">
-    <h2 class="text-white">Login</h2>
-    <form class="no-gutter" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <div class="row d-flex">
+<div class="container col-12 mw-90 bg-black d-flex align-items-center vh-100 w-80">
+  <div class="col-lg-4 col-sm-12 h-50 px-5 d-flex flex-column align-items-center bg-transparent" >
+    <h2 class="text-white px-0 mb-24 width-fit-content">Login</h2>
+    <form class="col-12" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="row d-flex  mb-4 position-relative pointer">
         <label class="text-white p-0" for="email">Email</label>
-        <input class="formGroup col-3" type="email" id="email" formControlName="email" required />
+        <input class="form-group sm-text-10 bg-transparent h-40 border-rounded-sm border border-white px-4 py-2 text-secondary" type="email" id="email"
+          formControlName="email" required placeholder="Enter your email" />
       </div>
-      <div class="row d-flex">
+      <div class="row d-flex mb-4  position-relative pointer">
         <label class="text-white p-0" for="password">Password</label>
-        <input class="formGroup col-3" type="password" id="password" formControlName="password" required />
+        <input class="form-group sm-text-10 px-4 py-2 bg-transparent h-40 border-rounded-sm border border-white text-secondary" type="password"
+          id="password" formControlName="password" required placeholder="Enter your password"/>
+        <i onclick="togglePassword()" class="bi cursor-pointer bi-eye {{ toggle ? 'eye-slash' : 'eye-white'}} position-absolute top-50 right-10 lg-right-5"></i>
       </div>
-      <button class="text-white" type="submit">Login</button>
+
+      <div class="row d-flex">
+        <button class="text-white btn btn-danger btn-xl" type="submit">Login</button>
+      </div>
+
+      <div class="col d-flex justify-content-end my-2">
+        <a class="link-secondary opacity-100-hover" routerLink="/forgot-password">Forgot Password ?</a>
+      </div>
+
+
+      <div class="selection col d-flex justify-content-around align-items-center mb-4">
+        <span class="white-line secondary"></span>
+        <span class="text-secondary width-fit-content">OR</span>
+        <span class="white-line secondary"> </span>
+      </div>
+
+      <div class="row d-flex  mb-4">
+        <button routerLink="/signup" class="text-white btn btn-danger" type="submit">Sign Up</button>
+      </div>
+
+      <div class="row d-flex">
+        <button class="text-white btn btn-danger" >SignUp With GOogle</button>
+      </div>
+
     </form>
-    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
-    <p class="text-white">Don't have an account? <a routerLink="/signup">Sign Up</a></p>
   </div>
 </div>

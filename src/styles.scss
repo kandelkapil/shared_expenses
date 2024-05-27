@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$container-max-widths: (
+  sm: 320px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$custom-utilities: (
+  "sm-r-10": (
+    property: right,
+    values: (
+      0: 0,
+      5: 10%,
+    )
+  ),
+  "lg-r-5": (
+    property: right,
+    values: (
+      0: 0,
+      5: 5%,
+    )
+  )
+);
+
+.container {
+    max-width: 90% !important;   
+}
+
+
+body {
+    background-color: black;
+}
+
+
+label {
+    margin-bottom: 7px !important;
+}
+
+.border-rounded {
+    border-radius: 50px !important;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+
+.border-rounded-sm {
+    border-radius: 5px !important;
+}
+
+.h-40 {
+    height: 40px !important;
+}
+
+.white-line {
+    background-color: white;
+    width: 42%;
+    height: 2px;
+}
+
+.width-fit-content {
+    width: fit-content;
+}
+
+.right-5{
+    right: 5% !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.eye-white{
+    color: white;
+    width: 22px !important;
+    height: 22px !important;
+}
+
+.mb-24{
+    margin-bottom: 24px !important;
+}
+
+.text-10{
+    font-size: 10px !important;
+}
+
+.right-10 {
+      right: 10%;
+  }
+
+  .pointer{
+    cursor:  pointer !important;
+  }

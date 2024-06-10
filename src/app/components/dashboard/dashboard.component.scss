@@ -3,10 +3,19 @@
     height: calc(100vh - 400px);
 }
 
-.bg-custom {
-    background-color: #CCCCCC;
+.search-bar{
+    height: 28px;
 }
 
-.search-bar{
-    height: 50px;
+
+#search:focus {
+    outline: 2px solid blue;
+}
+
+.nav-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
 }

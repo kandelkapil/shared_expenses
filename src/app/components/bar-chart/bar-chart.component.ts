@@ -10,7 +10,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
   imports: [NgxChartsModule]
 })
 export class BarChartComponent {
-  view: [number, number] = [700, 400];
+  view: [number, number] = [500, 300];
 
   // Options for the chart
   showXAxis = true;

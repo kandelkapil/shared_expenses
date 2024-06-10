@@ -3,33 +3,37 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
+:root {
+    --custom-blue: #A8DAE1;
+    --custom-pink: #FE6789;
+    --white: #FFFFFF;
+    --light-pink: #EAEBF8;
+    --custom-black: #333333;
+    --custom-black-one:#1A2B2E;
+    --custom-light-black : #666A87;
+}
+
 $container-max-widths: (
-  sm: 320px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
+    sm: 320px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
 );
 
 $custom-utilities: (
-  "sm-r-10": (
-    property: right,
-    values: (
-      0: 0,
-      5: 10%,
-    )
-  ),
-  "lg-r-5": (
-    property: right,
-    values: (
-      0: 0,
-      5: 5%,
-    )
-  )
+    "sm-r-10": (property: right,
+        values: (0: 0,
+            5: 10%,
+        )),
+    "lg-r-5": (property: right,
+        values: (0: 0,
+            5: 5%,
+        ))
 );
 
 .container {
-    max-width: 90% !important;   
+    max-width: 90% !important;
 }
 
 
@@ -44,6 +48,14 @@ label {
 
 .border-rounded {
     border-radius: 50px !important;
+}
+
+.border-rounded-18 {
+    border-radius: 18px !important;
+}
+
+.border-rounded-8 {
+    border-radius: 8px !important;
 }
 
 .bg-transparent {
@@ -69,7 +81,7 @@ label {
     width: fit-content;
 }
 
-.right-5{
+.right-5 {
     right: 5% !important;
 }
 
@@ -77,24 +89,140 @@ a {
     text-decoration: none !important;
 }
 
-.eye-white{
+.eye-white {
     color: white;
     width: 22px !important;
     height: 22px !important;
 }
 
-.mb-24{
+.mb-24 {
     margin-bottom: 24px !important;
 }
 
-.text-10{
+.text-10 {
     font-size: 10px !important;
 }
 
 .right-10 {
-      right: 10%;
-  }
+    right: 10%;
+}
 
-  .pointer{
-    cursor:  pointer !important;
-  }
+.pointer {
+    cursor: pointer !important;
+}
+
+.bg-custom {
+    background-color: #CCCCCC;
+}
+
+.outline-none {
+    outline: none !important;
+}
+
+.bg-custom-blue {
+    background: var(--custom-blue);
+}
+
+.bg-pink {
+    background-color: var(--light-pink);
+}
+
+.bg-dark-pink {
+    color: var(--custom-pink);
+}
+
+.text-18 {
+    font-size: 18px;
+}
+
+.text-pink {
+    color: var(--custom-pink);
+}
+
+.w-35 {
+    width: 35px !important;
+}
+
+.h-35 {
+    height: 35px !important;
+}
+
+.w-40 {
+    width: 40px !important;
+    max-width: 40px !important;
+}
+
+.h-40 {
+    height: 40px !important;
+    max-height: 40px !important;
+}
+
+.w-28 {
+    width: 28px !important;
+    max-width: 28px !important;
+}
+
+.h-28 {
+    height: 28px !important;
+    max-height: 28px !important;
+}
+
+.w-72 {
+    width: 72px !important;
+    max-width: 72px !important;
+}
+
+.h-72 {
+    height: 72px !important;
+    max-height: 72px !important;
+}
+
+.w-165 {
+    width: 165px !important;
+    max-width: 165px !important;
+}
+
+.h-165 {
+    height: 165px !important;
+    max-height: 165px !important;
+}
+
+
+.border-custom-black {
+    border: 1px solid var(--custom-black);
+}
+
+.text-custom-black {
+    color: var(--custom-black) !important;
+}
+
+.text-custom-light-black{
+    color: var(--custom-light-black);
+}
+
+.text-22{
+    font-size: 22px !important;
+}
+
+.text-24 {
+    font-size: 24px;
+}
+.p-16 {
+    padding: 16px;
+}
+
+.max-vh-95 {
+    max-height: 95vh;
+}
+
+.h-40-per{
+    height: 40%;
+}
+
+.h-60-per{
+    height: 60%;
+}
+
+.bg-custom-black-one {
+    background: var(--custom-black-one) !important;
+}

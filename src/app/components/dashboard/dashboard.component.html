@@ -1,53 +1,91 @@
 <div class="container">
     <div class="row">
 
-        <div class="side-bar row d-flex bg-custom vh-100 flex-column align-items-center col-2 py-5 px-2">
-            <img src="https://s3-alpha.figma.com/hub/file/1913095808/a7bdc469-cd70-4ea1-bb57-b59204ad8182-cover.png"
-                class="rounded-circle" alt="Profile Image" style="width: 50px; height: 50px;">
+        <div class="col-2">
+            <app-sidebar [navbarItems]="navbarItems" [selectedNavItem]='selectedNavItem'
+                [setSelectedNavItem]="setSelectedNavItem"> </app-sidebar>
+        </div>
 
-            <div class="profile">
-                <div class="text-center my-4">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg"
-                        class="rounded-circle" alt="Profile Image" style="width: 80px; height: 80px;">
-                    <h5 class="mt-3 text-white">Your Name</h5>
+        <div class="content max-vh-95 overflow-auto bg-white col-10">
+            <div class="nav-container px-3 py-4 bg-white">
+                <div class="d-flex p-2 border-rounded-8  bg-custom align-items-center greeting-container">
+                    <div class="col-4 px-2">
+                        <h2 class="text-24 mb-0"><span class="text-custom-light-black">Welcome,</span> {{' '}}John Doe
+                        </h2>
+                    </div>
+                    <div class="col-7 d-flex align-items-center text-center">
+                        <i class="text-white text-22 bi bi-search"></i>
+                        <input id="search" type="text"
+                            class="bg-custom px-4 border-0 mx-2 border-rounded-8  search-bar w-100"
+                            placeholder="Search">
+                    </div>
+                    <div
+                        class="w-40  d-flex justify-content-center align-items-center h-40 border-rounded-8 border-custom-black text-right">
+                        <button class="btn btn-link  text-custom-black p-0">
+                            <i class="bi bi-bell"></i>
+                        </button>
+                    </div>
                 </div>
-                <button routerLink="/profile" class="text-white btn btn-danger btn-xl mb-4" type="submit">Edit
-                    Profile</button>
             </div>
+            <div class="parent-container d-flex  row">
+                <div class="container-one col-8">
 
+                    <div class="content d-flex bg-white gap-4 mx-4">
 
-            <div class="nav-buttons d-flex col-12 flex-column mt-3">
-                <button class="btn btn-block mb-2" *ngFor="let button of navbarItems;let i = index; let last = last"
-                    [ngClass]="{
-                'btn-danger text-white': selectedButton === button,
-                'text-white': selectedButton !== button,
-                'mt-auto': last,
-            }" (click)="setSelected(button)">
-                    {{button}}
-                </button>
+                        <div class="chart-one row col-6 d-flex flex-column gap-3">
+                            <div class="col-12 bg-custom-blue border-rounded-18 p-16 d-flex align-items-center gap-4">
+                                <div class="circle-chart h-72 w-72 text-18">
+                                    <app-circle-chart [value]="40"></app-circle-chart>
+                                </div>
+                                <div class="d-flex w-100  justify-content-between align-items-center">
+                                    <div class="d-flex flex-column">
+                                        <span class="text-white text-18">Total Amount</span>
+                                        <span class="amount">Rs 50000</span>
+                                    </div>
+
+                                    <div
+                                        class="arrow-right w-35 h-35 bg-pink rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="bi bi-arrow-right text-pink text-22"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-12 border-rounded-18 bg-custom-blue">
+                                <app-area-chart></app-area-chart>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-6 d-flex flex-column justify-content-center align-items-center bg-custom-blue border-rounded-18">
+
+                            <div class="d-flex flex-column align-items-center">
+                                <span class="text-18">Paid</span>
+                                <span class="text-white text-22">Rs 50000</span>
+                            </div>
+
+                            <app-advanced-pie-chart></app-advanced-pie-chart>
+
+                        </div>
+                    </div>
+
+                    <div class="bar-chart bg-custom-blue border-rounded-18 col-8 mx-3 mt-4">
+                        <app-bar-chart></app-bar-chart>
+                    </div>
+
+                </div>
+
+                <div class="row container-two d-flex flex-column col-4">
+                            <button class="btn text-white bg-custom-black-one">
+                                Add Records
+                            </button>
+                </div>
+
             </div>
 
 
         </div>
 
 
-        <div class="content bg-white col-10">
-            <div class="d-flex mx-3 my-4 bg-custom align-items-center greeting-container">
-                <div class="flex-grow-1 px-2">
-                    <span>Welcome, John Doe</span>
-                </div>
-                <div class="flex-grow-1 text-center">
-                    <input type="text" class="form-control search-bar d-inline w-50" placeholder="Search">
-                </div>
-                <div class="flex-grow-1 text-right">
-                    <button class="btn btn-link p-0">
-                        <i class="bi bi-bell"></i>
-                    </button>
-                </div>
-            </div>
-
-            <app-bar-chart></app-bar-chart>
-        </div>
 
     </div>
 </div>

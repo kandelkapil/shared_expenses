@@ -7,11 +7,12 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 import { AreaChartComponent } from '../area-chart/area-chart.component';
 import { AdvancedPieChartComponent } from '../advanced-pie-chart/advanced-pie-chart.component';
 import { CircleChart } from '../circle-chart/circle-chart.component';
+import { NotificationPanel } from '../../notification-panel/notification-panel.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [RouterModule, CommonModule, BarChartComponent, AreaChartComponent, SidebarComponent, AdvancedPieChartComponent, CircleChart],
+  imports: [RouterModule, CommonModule, BarChartComponent, AreaChartComponent, SidebarComponent, AdvancedPieChartComponent, CircleChart, NotificationPanel],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })

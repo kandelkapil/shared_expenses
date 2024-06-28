@@ -9,8 +9,8 @@
     --white: #FFFFFF;
     --light-pink: #EAEBF8;
     --custom-black: #333333;
-    --custom-black-one:#1A2B2E;
-    --custom-light-black : #666A87;
+    --custom-black-one: #1A2B2E;
+    --custom-light-black: #666A87;
 }
 
 $container-max-widths: (
@@ -196,17 +196,18 @@ a {
     color: var(--custom-black) !important;
 }
 
-.text-custom-light-black{
+.text-custom-light-black {
     color: var(--custom-light-black);
 }
 
-.text-22{
+.text-22 {
     font-size: 22px !important;
 }
 
 .text-24 {
     font-size: 24px;
 }
+
 .p-16 {
     padding: 16px;
 }
@@ -215,14 +216,22 @@ a {
     max-height: 95vh;
 }
 
-.h-40-per{
+.h-40-per {
     height: 40%;
 }
 
-.h-60-per{
+.h-60-per {
     height: 60%;
 }
 
 .bg-custom-black-one {
     background: var(--custom-black-one) !important;
+}
+
+.gap-30 {
+    gap: 30px;
+}
+
+.min-h-1000{
+    min-height: 1000px;
 }
